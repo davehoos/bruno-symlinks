@@ -1,7 +1,7 @@
 #Link File
 $linkFolder = "bruno\API Test\environments" 
 
-$linkFile = $linkFolder + "PROD.bru"
+$linkFile = $linkFolder + "\PROD.bru"
 
 #Source File
 $sourceFile = "environments\PROD.bru"
