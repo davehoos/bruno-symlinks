@@ -1,12 +1,11 @@
-#Link File
-$linkFile = "bruno\API Test\environments\PROD.bru"
+#Link Folder
+$linkFolder = "bruno\API Test\environments"
 
 #Source File
-$sourceFile = "PROD.bru"
+$sourceFolder = "environments"
 
-#Create Junction - Only supported for folders
-##New-Item -Path $linkFile -ItemType Junction -Value $sourceFile
+#Remove Item
+Remove-Item -Path $linkFolder -ErrorAction SilentlyContinue
 
-New-Item -Path $linkFile -ItemType SymbolicLink -Value $sourceFile
-
-#Remove-Item -Path $linkFile
+#Create Junction
+New-Item -Path $linkFolder -ItemType Junction -Value $sourceFolder
